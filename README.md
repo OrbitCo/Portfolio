@@ -9,6 +9,10 @@
 <li>Maven
 <li>Junit
 
+<p>UI
+<li>Angular
+<li>Node
+  
 <p>Local run
 
 <li>Eclipse 
