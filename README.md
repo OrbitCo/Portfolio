@@ -6,14 +6,14 @@
 <li>Java Collections
 <li>org.springframework.http 
 <li>org.slf4j.LoggerFactory;
-Maven
-Junit
+<li>Maven
+<li>Junit
 
-Local run
+<p>Local run
 
-Eclipse 
-Import project
-mvn install
-run jar java -jar Portfolio-0.0.1-SNAPSHOT.jar
-access ap on port 5000
-https://snag.gy/VDG0ms.jpg
+<li>Eclipse 
+<li>Import project
+<li>mvn install
+<li>run jar java -jar Portfolio-0.0.1-SNAPSHOT.jar
+<li>access ap on port 5000
+<li>https://snag.gy/VDG0ms.jpg
