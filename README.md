@@ -1,11 +1,11 @@
 # Portfolio
-Spring Boot
-Embedded H2
-JPA
-DTO
-Java Collections
-org.springframework.http 
-org.slf4j.LoggerFactory;
+<li>Spring Boot
+<li>Embedded H2
+<li>JPA
+<li>DTO
+<li>Java Collections
+<li>org.springframework.http 
+<li>org.slf4j.LoggerFactory;
 Maven
 Junit
 
