@@ -1,5 +1,5 @@
 # Portfolio
-<li>Sserver<p>
+Sserver<p>
 <li>Spring Boot
 <li>Embedded H2
 <li>JPA
