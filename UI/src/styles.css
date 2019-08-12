@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+.main-container
+{
+    margin-top: 2%;
+}
+.is-invalid
+{
+
+border: 1px solid #ff9494;
+}
+.invalid-feedback
+{
+    color: #ff9494;
+    display: block !important
+}
+.heading
+{
+    text-align: center;
+}

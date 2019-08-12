@@ -1,0 +1,84 @@
+<div class="main-container">
+  <div class="container">
+    <div class="heading">
+      <h3>Portfolio Info</h3>
+    </div>
+    <!-- Extended default form grid -->
+    <!-- Default inline form -->
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div *ngIf="alertMessage">
+          <ngb-alert [type]="alertType" (close)="close(alert)">{{ alertMessage }}</ngb-alert>
+        </div>
+        <form [formGroup]="userGroup" (ngSubmit)="submitData()">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <label>First Name</label>
+                <input type="text" mdbInput formControlName="firstName" class="form-control"
+                  placeholder="Enter First Name" maxlength="50"
+                  [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" (keydown)="onlyAlphabets($event)" />
+                <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <label>Last Name</label>
+                <input type="text" mdbInput formControlName="lastName" class="form-control"
+                  placeholder="Enter Last Name" maxlength="50"
+                  [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" (keydown)="onlyAlphabets($event)" />
+                <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                  <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <label>Date Of Birth</label>
+                <div class="input-group">
+                  <input class="form-control" mdbInput placeholder="yyyy-mm-dd" name="dob" formControlName="dob"
+                    (click)="d2.toggle()" autocomplete="off" readonly="true" ngbDatepicker #d2="ngbDatepicker"
+                    [ngClass]="{ 'is-invalid': submitted && f.dob.errors }">
+                </div>
+                <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                  <div *ngIf="f.dob.errors.required">DOB is required</div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <label>Assets</label>
+                <div class="input-group mb-2 mr-sm-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">$</div>
+                  </div>
+                  <input type="text" formControlName="fundAmt" mdbInput placeholder="Enter Amount"
+                    (keydown)="onlyDecimalNumberKey($event)" class="form-control py-0"
+                    [ngClass]="{ 'is-invalid': submitted && f.fundAmt.errors }" />
+                </div>
+                <div *ngIf="submitted && f.fundAmt.errors" class="invalid-feedback">
+                  <div *ngIf="f.fundAmt.errors.required">Assets is required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="heading" *ngIf="userData">
+      <h3>Portfolio Response</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <pre>
+                      {{userData | json}}
+                  </pre>
+      </div>
+    </div>
+  </div>
+</div>
